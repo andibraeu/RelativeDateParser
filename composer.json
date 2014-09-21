@@ -1,0 +1,14 @@
+{
+    "name": "enko/relativedateparser",
+    "require": {
+        "symfony/Translation" : "~2.5",
+        "symfony/Config" : "~2.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tim Schumacher",
+            "email": "tim@bandenkrieg.hacked.jp"
+        }
+    ]
+}
