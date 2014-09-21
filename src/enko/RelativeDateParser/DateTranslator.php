@@ -24,7 +24,9 @@ class DateTranslator {
         if ($lang == '') {
             throw new \BadMethodCallException('Language is missing');
         }
-        $dir_iterator = new \RecursiveDirectoryIterator("translations");
+
+        $translations_path = realpath(__DIR__ . '/../../../translations');
+        $dir_iterator = new \RecursiveDirectoryIterator($translations_path);
         $iterator = new \RecursiveIteratorIterator($dir_iterator, \RecursiveIteratorIterator::SELF_FIRST);
 
         foreach ($iterator as $file) {
