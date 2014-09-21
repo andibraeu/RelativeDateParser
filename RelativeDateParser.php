@@ -250,11 +250,15 @@ class RelativeDateParser {
 
   }
 
-  public function getCurrent(DateTime $now) {
-    return $this->datetype->getCurrent($now);
+  public function getCurrent() {
+    return $this->datetype->getCurrent($this->now);
   }
 
-  public function getNext(DateTime $now) {
-    return $this->datetype->getNext($now);
+  public function getNext() {
+    return $this->datetype->getNext($this->now);
+  }
+
+  public function setNow(DateTime $now) {
+    $this->now = $now;
   }
 } 
