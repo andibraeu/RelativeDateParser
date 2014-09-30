@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-21 15:24+0200\n"
+"POT-Creation-Date: 2014-09-30 06:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,70 +17,84 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: RelativeDateParser.php:48
-msgid "/([Erster|Zweiter|Dritter|Letzter]+) ([Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag]+) des ([Monats|Jahres]+)/im"
+#: src/enko/RelativeDateParser/RelativeDateType1.php:12
+msgid ""
+"/([Erster|Zweiter|Dritter|Letzter]+) ([Montag|Dienstag|Mittwoch|Donnerstag|"
+"Freitag|Samstag|Sonntag]+) des ([Monats|Jahres]+)/im"
 msgstr ""
 
-#: RelativeDateParser.php:106
+#: src/enko/RelativeDateParser/RelativeDateType1.php:69
 msgid "Erster"
 msgstr ""
 
-#: RelativeDateParser.php:109
+#: src/enko/RelativeDateParser/RelativeDateType1.php:72
 msgid "Zweiter"
 msgstr ""
 
-#: RelativeDateParser.php:112
+#: src/enko/RelativeDateParser/RelativeDateType1.php:75
 msgid "Dritter"
 msgstr ""
 
-#: RelativeDateParser.php:115
+#: src/enko/RelativeDateParser/RelativeDateType1.php:78
 msgid "Letzter"
 msgstr ""
 
-#: RelativeDateParser.php:123
+#: src/enko/RelativeDateParser/RelativeDateType1.php:86
 msgid "Montag"
 msgstr ""
 
-#: RelativeDateParser.php:126
+#: src/enko/RelativeDateParser/RelativeDateType1.php:89
 msgid "Dienstag"
 msgstr ""
 
-#: RelativeDateParser.php:129
+#: src/enko/RelativeDateParser/RelativeDateType1.php:92
 msgid "Mittwoch"
 msgstr ""
 
-#: RelativeDateParser.php:132
+#: src/enko/RelativeDateParser/RelativeDateType1.php:95
 msgid "Donnerstag"
 msgstr ""
 
-#: RelativeDateParser.php:135
+#: src/enko/RelativeDateParser/RelativeDateType1.php:98
 msgid "Freitag"
 msgstr ""
 
-#: RelativeDateParser.php:138
+#: src/enko/RelativeDateParser/RelativeDateType1.php:101
 msgid "Samstag"
 msgstr ""
 
-#: RelativeDateParser.php:141
+#: src/enko/RelativeDateParser/RelativeDateType1.php:104
 msgid "Sonntag"
 msgstr ""
 
-#: RelativeDateParser.php:149
+#: src/enko/RelativeDateParser/RelativeDateType1.php:112
 msgid "Monats"
 msgstr ""
 
-#: RelativeDateParser.php:152
+#: src/enko/RelativeDateParser/RelativeDateType1.php:115
 msgid "Jahres"
 msgstr ""
 
-#: RelativeDateParser.php:166
+#: src/enko/RelativeDateParser/RelativeDateType2.php:11
 msgid "/Alle (\\d+) ([Wochen|Tage]+)/im"
 msgstr ""
 
-#: RelativeDateParser.php:192
+#: src/enko/RelativeDateParser/RelativeDateType2.php:37
 msgid "Tage"
 msgstr ""
 
-#: RelativeDateParser.php:195
+#: src/enko/RelativeDateParser/RelativeDateType2.php:40
 msgid "Wochen"
+msgstr ""
+
+#: src/enko/RelativeDateParser/RelativeDateType3.php:16
+msgid "/Jeder (\\d+)\\. Tag eines Monats/im"
+msgstr ""
+
+#: src/enko/RelativeDateParser/RelativeDateType3.php:25
+msgid "Angegebener Tag ist nicht im Monat %date% enthalten."
+msgstr ""
+
+#: src/enko/RelativeDateParser/RelativeDateType3.php:47
+msgid "Tag wurde nicht angegeben oder ist falsch."
 msgstr ""
