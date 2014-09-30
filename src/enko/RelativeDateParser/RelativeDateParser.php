@@ -34,6 +34,12 @@ class RelativeDateParser {
             return $this;
         }
 
+        $success = preg_match(RelativeDateType3::getRegex(),$string,$match);
+        if ($success === 1) {
+            $this->datetype = new RelativeDateType3($match);
+            return $this;
+        }
+
         throw new \Exception('No DateType found.');
 
     }

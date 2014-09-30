@@ -45,7 +45,7 @@ class DateTranslator {
         }
     }
 
-    public function translate($string) {
-        return $this->translator->trans($string);
+    public function translate($string,$params = []) {
+        return $this->translator->trans($string,$params);
     }
 }
