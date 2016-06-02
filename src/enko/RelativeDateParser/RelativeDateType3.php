@@ -13,7 +13,7 @@ class RelativeDateType3 {
     private $day = -1;
 
     public static function getRegex() {
-        return DateTranslator::getInstance()->translate('/Jeder (\d+)\. Tag eines Monats/im');
+        return DateTranslator::getInstance()->translate('/^Jeder (\d+)\. Tag eines Monats$/im');
     }
 
     private function getDay() {

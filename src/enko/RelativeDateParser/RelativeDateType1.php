@@ -9,7 +9,7 @@ class RelativeDateType1 {
     private $month_or_year = -1;
 
     public static function getRegex() {
-        return DateTranslator::getInstance()->translate('/([Erster|Zweiter|Dritter|Letzter]+) ([Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag]+) des ([Monats|Jahres]+)/im');
+        return DateTranslator::getInstance()->translate('/^([Erster|Zweiter|Dritter|Letzter]+) ([Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag]+) des ([Monats|Jahres]+)$/im');
     }
 
     private function getOrdinal() {
@@ -50,7 +50,7 @@ class RelativeDateType1 {
 
     public function getCurrent(\DateTime $now) {
         $date = new \DateTime();
-        $date->setTimestamp (strtotime (sprintf ('%s %s %s %d', $this->getOrdinal (), $this->getDay (), $now->format('F'), $now->format('Y'))));
+        $date->setTimestamp (strtotime (sprintf ('%s %s of %s %d', $this->getOrdinal (), $this->getDay (), $now->format('F'), $now->format('Y'))));
         $date->setTime($now->format('H'),$now->format('i'));
 
         return $date;

@@ -8,7 +8,7 @@ class RelativeDateType2 {
     private $days_or_week = -1;
 
     public static function getRegex() {
-        return DateTranslator::getInstance()->translate('/Alle (\d+) ([Wochen|Tage]+)/im');
+        return DateTranslator::getInstance()->translate('/^Alle (\d+) ([Wochen|Tage]+)$/im');
     }
 
     public function getCurrent(\DateTime $now) {
