@@ -23,20 +23,20 @@ class RelativeDateParser {
         }
 
         // then try to determine which datetype we have here
-        $success = preg_match(RelativeDateType1::getRegex(),$string,$match);
+        $success = preg_match(WeekdayPatternRecurrence::getRegex(),$string,$match);
         if ($success === 1) {
-            $this->datetype = new RelativeDateType1($match);
+            $this->datetype = new WeekdayPatternRecurrence($match);
             return $this;
         }
-        $success = preg_match(RelativeDateType2::getRegex(),$string,$match);
+        $success = preg_match(IntervalRecurrence::getRegex(),$string,$match);
         if ($success === 1) {
-            $this->datetype = new RelativeDateType2($match);
+            $this->datetype = new IntervalRecurrence($match);
             return $this;
         }
 
-        $success = preg_match(RelativeDateType3::getRegex(),$string,$match);
+        $success = preg_match(MonthDayRecurrence::getRegex(),$string,$match);
         if ($success === 1) {
-            $this->datetype = new RelativeDateType3($match);
+            $this->datetype = new MonthDayRecurrence($match);
             return $this;
         }
 
