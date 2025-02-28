@@ -1,5 +1,9 @@
 {
     "name": "enko/relativedateparser",
+    "description": "A PHP library for parsing relative date expressions like 'next monday' or 'every 2nd friday'",
+    "type": "library",
+    "keywords": ["date", "parser", "relative", "time"],
+    "homepage": "https://github.com/andibraeu/RelativeDateParser",
     "require": {
         "php": ">=8.2",
         "symfony/framework-bundle": "^7.2",

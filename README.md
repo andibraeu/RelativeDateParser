@@ -90,3 +90,7 @@ To add support for new date expression types:
 ### Translation Support
 
 The library supports translations through Symfony's Translation component. Translation files should be placed in the `translations` directory as .po files.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
