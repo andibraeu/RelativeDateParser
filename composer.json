@@ -5,7 +5,7 @@
     "keywords": ["date", "parser", "relative", "time"],
     "homepage": "https://github.com/andibraeu/RelativeDateParser",
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "symfony/framework-bundle": "^7.2",
         "symfony/runtime": "^7.2",
         "symfony/translation": "^7.2",
