@@ -2,7 +2,6 @@
 
 namespace enko\RelativeDateParser;
 
-
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\Loader\PoFileLoader;
 
@@ -29,23 +28,24 @@ class DateTranslator {
         $dir_iterator = new \RecursiveDirectoryIterator($translations_path);
         $iterator = new \RecursiveIteratorIterator($dir_iterator, \RecursiveIteratorIterator::SELF_FIRST);
 
+        $this->translator = new Translator($lang);
+        $this->translator->addLoader('pofile', new PoFileLoader());
+        
+        $translationFileFound = false;
+        
         foreach ($iterator as $file) {
             if (basename($file,'.po') == $lang) {
-                $loader = new PoFileLoader();
-                $loader->load(realpath($file),$lang);
-
-                $this->translator = new Translator($lang);
-                $this->translator->addLoader('pofile', $loader);
-                $this->translator->addResource('pofile',realpath($file),$lang);
+                $this->translator->addResource('pofile', realpath($file), $lang);
+                $translationFileFound = true;
             }
         }
 
-        if (is_null($this->translator)) {
+        if (!$translationFileFound) {
             throw new \BadMethodCallException('No translation file for this language available.');
         }
     }
 
-    public function translate($string,$params = []) {
-        return $this->translator->trans($string,$params);
+    public function translate($string, $params = []) {
+        return $this->translator->trans($string, $params);
     }
 }

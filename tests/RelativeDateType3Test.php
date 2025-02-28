@@ -1,8 +1,9 @@
 <?php
 
 use enko\RelativeDateParser\RelativeDateParser;
+use PHPUnit\Framework\TestCase;
 
-class RelativeDateType3Test extends PHPUnit_Framework_TestCase
+class RelativeDateType3Test extends TestCase
 {
     public function testNextDate()
     {

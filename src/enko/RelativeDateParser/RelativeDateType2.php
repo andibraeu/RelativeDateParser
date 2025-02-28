@@ -2,8 +2,7 @@
 
 namespace enko\RelativeDateParser;
 
-
-class RelativeDateType2 {
+class RelativeDateType2 extends RelativeDateType {
     private $interval = -1;
     private $days_or_week = -1;
 

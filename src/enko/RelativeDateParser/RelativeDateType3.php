@@ -8,8 +8,7 @@
 
 namespace enko\RelativeDateParser;
 
-
-class RelativeDateType3 {
+class RelativeDateType3 extends RelativeDateType {
     private $day = -1;
 
     public static function getRegex() {

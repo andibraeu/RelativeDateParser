@@ -2,8 +2,7 @@
 
 namespace enko\RelativeDateParser;
 
-
-class RelativeDateType1 {
+class RelativeDateType1 extends RelativeDateType {
     private $ordinal = -1;
     private $day = -1;
     private $month_or_year = -1;
