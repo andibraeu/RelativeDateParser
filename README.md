@@ -8,7 +8,23 @@ This library was originally created by Tim Schumacher and has been updated to wo
 
 ## Installation
 
-You can install the library via Composer:
+You can install the library via Composer by adding the GitHub repository to your composer.json:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.comandibraeu/RelativeDateParser"
+        }
+    ],
+    "require": {
+        "enko/relativedateparser": "^1.0"
+    }
+}
+```
+
+Then run:
 
 ```bash
 composer require enko/relativedateparser
