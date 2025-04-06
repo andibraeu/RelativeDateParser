@@ -10,7 +10,7 @@ class RelativeDateParser {
 
     private $now = null;
 
-    function __construct ($string,\DateTime $now = null, $lang = 'en') {
+    function __construct(string $string, ?\DateTime $now = null, string $lang = 'en') {
         // initialize the translator
 
         DateTranslator::getInstance($lang);

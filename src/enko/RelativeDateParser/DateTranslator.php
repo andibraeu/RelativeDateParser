@@ -11,7 +11,7 @@ class DateTranslator {
 
     private $translator = null;
 
-    public static function getInstance($lang = '') {
+    public static function getInstance(string $lang = '') {
         if (is_null(static::$instance)) {
             static::$instance = new static($lang);
         }
@@ -19,7 +19,7 @@ class DateTranslator {
         return static::$instance;
     }
 
-    private function __construct($lang) {
+    private function __construct(string $lang) {
         if ($lang == '') {
             throw new \BadMethodCallException('Language is missing');
         }
@@ -45,7 +45,7 @@ class DateTranslator {
         }
     }
 
-    public function translate($string, $params = []) {
+    public function translate(string $string, array $params = []) {
         return $this->translator->trans($string, $params);
     }
 }
