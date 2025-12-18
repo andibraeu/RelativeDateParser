@@ -4,7 +4,7 @@ RelativeDateParser is a PHP library that parses relative date expressions in nat
 
 ## Origin
 
-This library was originally created by Tim Schumacher and has been updated to work with Symfony 7.2 and PHP 8.2.
+This library was originally created by Tim Schumacher and has been updated to work with Symfony 8.0 and PHP 8.4.
 
 ## Installation
 
@@ -19,7 +19,7 @@ You can install the library via Composer by adding the GitHub repository to your
         }
     ],
     "require": {
-        "enko/relativedateparser": "^1.0"
+        "enko/relativedateparser": "^2.0"
     }
 }
 ```
