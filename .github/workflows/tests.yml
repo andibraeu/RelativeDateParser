@@ -16,7 +16,7 @@ jobs:
     - name: Setup PHP with required extensions
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.3'
+        php-version: '8.4'
         extensions: calendar
         
     - name: Validate composer.json and composer.lock
